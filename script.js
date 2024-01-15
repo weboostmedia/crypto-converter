@@ -8,7 +8,7 @@ document.getElementById('convert-btn').addEventListener('click', function() {
             if (data[crypto] && data[crypto].usd) {
                 const cryptoToUsd = data[crypto].usd;
                 const usdToCustomToken = amount * cryptoToUsd / 0.01; // 1 token = 0.01 USD
-                document.getElementById('result').innerText = `Equivalent in Custom Tokens: ${usdToCustomToken.toFixed(2)}`;
+                document.getElementById('result').innerText = `Equivalent in Just Stake It Tokens: ${usdToCustomToken.toFixed(2)}`;
             } else {
                 throw new Error('Invalid response data');
             }
