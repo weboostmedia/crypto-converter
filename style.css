@@ -11,22 +11,21 @@ body {
 .converter-container {
     background: transparent;
     border-radius: 10px;
-    padding: 20px; /* Increased padding */
+    padding: 25px 15px; /* Increased vertical padding */
     box-shadow: none;
-    width: 350px; /* Increased width */
+    width: 300px; /* Original width */
     text-align: center;
 }
 
 input, select, button {
-    width: calc(100% - 40px); /* Adjusted width for spacing */
-    padding:
-    padding: 12px; /* Increased padding for inputs */
-    margin: 8px 0; /* Increased margin for more space */
+    width: calc(100% - 30px); /* Original width */
+    padding: 12px; /* Increased vertical padding */
+    margin: 8px 0; /* Increased vertical margin */
     border-radius: 5px;
     border: 1px solid #333;
     background: transparent;
     color: #333;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 button {
@@ -41,8 +40,8 @@ button:hover {
 }
 
 #result {
-    margin-top: 20px; /* Increased margin above the result */
-    font-size: 1.1em; /* Slightly larger font size */
+    margin-top: 20px;
+    font-size: 1.2em;
 }
 
 select {
@@ -58,11 +57,12 @@ select {
 
 @media (max-width: 600px) {
     .converter-container {
-        width: 90%; /* Adjusted for smaller screens */
-        padding: 15px;
+        width: 90%;
+        padding: 20px 10px; /* Adjusted padding for smaller screens */
     }
 
     input, select, button {
-        width: calc(100% - 30px);
+        width: calc(100% - 20px);
+        padding: 10px; /* Adjusted padding for smaller screens */
     }
 }
