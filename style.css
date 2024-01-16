@@ -11,21 +11,22 @@ body {
 .converter-container {
     background: transparent;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px; /* Increased padding */
     box-shadow: none;
-    width: 300px;
+    width: 350px; /* Increased width */
     text-align: center;
 }
 
 input, select, button {
-    width: calc(100% - 30px);
-    padding: 8px;
-    margin: 5px 0;
+    width: calc(100% - 40px); /* Adjusted width for spacing */
+    padding:
+    padding: 12px; /* Increased padding for inputs */
+    margin: 8px 0; /* Increased margin for more space */
     border-radius: 5px;
     border: 1px solid #333;
     background: transparent;
     color: #333;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 button {
@@ -40,8 +41,8 @@ button:hover {
 }
 
 #result {
-    margin-top: 15px;
-    font-size: 1em;
+    margin-top: 20px; /* Increased margin above the result */
+    font-size: 1.1em; /* Slightly larger font size */
 }
 
 select {
@@ -55,14 +56,13 @@ select {
     color: #333;
 }
 
-@media (max-width: 
 @media (max-width: 600px) {
     .converter-container {
-        width: 80%;
-        padding: 10px;
+        width: 90%; /* Adjusted for smaller screens */
+        padding: 15px;
     }
 
     input, select, button {
-        width: calc(100% - 20px);
+        width: calc(100% - 30px);
     }
 }
