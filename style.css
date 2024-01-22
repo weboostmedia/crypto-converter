@@ -1,46 +1,57 @@
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    background-color: transparent; /* No background color for the body */
-    color: #ffffff; /* White text */
+    background-color: transparent;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Height of the viewport */
+    height: 100vh;
     margin: 0;
-    overflow: hidden; /* Prevents scrolling */
+    overflow: hidden;
 }
 
 .converter-container {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white for glass effect */
+    background: rgba(255, 255, 255, 0.2);
     padding: 30px;
     border-radius: 40px;
     text-align: center;
     width: 380px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    backdrop-filter: blur(10px); /* Key for glassmorphism effect */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Light border for depth perception */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-input, select, button {
-    width: calc(100% - 40px); /* Adjusted for consistent spacing */
+input, button {
+    width: calc(100% - 40px);
     padding: 8px;
     margin: 20px 0;
     border-radius: 20px;
-    border: 2px solid #ffffff; /* White border */
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent for inputs */
+    border: 2px solid #ffffff;
+    background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
     font-size: 1.3em;
 }
 
+select {
+    width: calc(100% - 40px);
+    padding: 8px;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    background: #333333; /* Darker background */
+    color: #ffffff; /* White text */
+    font-size: 1.3em;
+}
+
 button {
-    background-color: #000000; /* Black color for the button */
+    background-color: #000000;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #367c39; /* Darker green on hover */
+    background-color: #367c39;
 }
 
 #result {
