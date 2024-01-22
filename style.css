@@ -1,13 +1,13 @@
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    background-color: #1a1a1a; /* Dark background for crypto theme */
+    background-color: transparent; /* No background color for the body */
     color: #ffffff; /* White text */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Height of the viewport */
     margin: 0;
-    overflow: hidden; /* Added to prevent scrolling */
+    overflow: hidden; /* Prevents scrolling */
 }
 
 .converter-container {
@@ -33,14 +33,14 @@ input, select, button {
 }
 
 button {
-    background-color: #000000; /* Stylish green for the button */
+    background-color: #000000; /* Black color for the button */
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #367c39;
+    background-color: #367c39; /* Darker green on hover */
 }
 
 #result {
