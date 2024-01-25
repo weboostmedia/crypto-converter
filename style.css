@@ -26,9 +26,9 @@ input, button {
     padding: 8px;
     margin: 20px 0;
     border-radius: 20px;
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
     background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
+    color: #000000;
     font-size: 1.3em;
 }
 
@@ -45,7 +45,7 @@ select {
 
 button {
     background-color: #000000;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -57,7 +57,7 @@ button:hover {
 #result {
     margin-top: 20px;
     font-size: 1.2em;
-    color: #4CAF50;
+    color: #000000;
     word-wrap: break-word;
 }
 
