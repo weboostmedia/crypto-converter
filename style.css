@@ -32,6 +32,11 @@ input, button {
     font-size: 1.3em;
 }
 
+input::placeholder {
+    color: #000000; /* White placeholder text */
+    opacity: 1; /* Ensure the placeholder is fully visible */
+}
+
 select {
     width: calc(100% - 40px);
     padding: 8px;
@@ -51,7 +56,7 @@ button {
 }
 
 button:hover {
-    background-color: #367c39;
+    background-color: #bada55;
 }
 
 #result {
