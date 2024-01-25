@@ -1,30 +1,64 @@
-document.getElementById('convert-btn').addEventListener('click', function() {
-    // Display a loading animation in the result element
-    document.getElementById('result').innerHTML = '<div class="loading-animation"></div>';
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: transparent;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
 
-    const crypto = document.getElementById('crypto-select').value;
-    const amount = document.getElementById('crypto-amount').value;
+.converter-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 40px;
+    text-align: center;
+    width: 380px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
 
-    fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${crypto}&vs_currencies=usd`)
-        .then(response => response.json())
-        .then(data => {
-            if (data[crypto] && data[crypto].usd) {
-                const cryptoToUsd = data[crypto].usd;
-                const usdToCustomToken = amount * cryptoToUsd / 0.001; // 1 token = 0.001 USD
-                document.getElementById('result').innerText = `Equivalent in Just Stake It Tokens: ${usdToCustomToken.toFixed(2)}`;
-            } else {
-                throw new Error('Invalid response data');
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching data: ', error);
-            document.getElementById('result').innerText = 'Error fetching conversion data.';
-        })
-        .finally(() => {
-            // Remove the loading animation once data is fetched or in case of an error
-            const loadingElement = document.querySelector('.loading-animation');
-            if (loadingElement) {
-                loadingElement.remove();
-            }
-        });
-});
+input, button {
+    width: calc(100% - 40px);
+    padding: 8px;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    background: rgba(255, 255, 255, 0.1);
+    color: #000000;
+    font-size: 1.3em;
+}
+
+select {
+    width: calc(100% - 40px);
+    padding: 8px;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    background: #333333; /* Darker background */
+    color: #ffffff; /* White text */
+    font-size: 1.3em;
+}
+
+button {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #367c39;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #000000;
+    word-wrap: break-word;
+}
+
+/* Loading animation styles can remain as they are */
